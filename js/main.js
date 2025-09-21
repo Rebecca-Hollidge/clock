@@ -42,3 +42,6 @@ function updateClock() {
     $(document).ready(function () {
     setInterval(updateClock, 1000);
 });
+
+//const backgrondImage = new Image();
+//backgrond.src = "img/background.png";

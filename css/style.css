@@ -1,11 +1,136 @@
-*, #clock {
+#clock {
   margin: 20px auto;
-  padding: 0;
-  background: #333;
-  width: 100%;
+  padding: 10px;
+  width: fit-content;
   text-align: center;
-  line-height: 40px;
+  line-height: 1.4;
   color: #fff;
   font-size: 34px;
-  font-family: calibri;
+  font-family: Calibri, sans-serif;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: url("img/background.png") no-repeat center center/cover;
+  z-index: -1;
+}
+
+/* Neon light bar */
+.neon-lightsec {
+  width: 10%;
+  height: 20px;
+  background: transparent;
+  border-radius: 15px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  box-shadow: 
+    0 0 20px #08f,
+    0 0 40px #08f,
+    0 0 80px #08f,
+    inset 0 0 10px #08f;
+  animation: run 1s linear infinite;
+}
+
+.neon-lightmin {
+  width: 10%;
+  height: 20px;
+  background: transparent;
+  border-radius: 15px;
+  position: absolute;
+  top: 45%;
+  left: 0;
+  box-shadow: 
+    0 0 20px rgb(188, 55, 206),
+    0 0 40px rgb(188, 55, 206),
+    0 0 80px rgb(188, 55, 206),
+    inset 0 0 10px rgb(188, 55, 206);
+  animation: run 60s linear infinite;
+}
+
+.neon-lighthour {
+  width: 10%;
+  height: 20px;
+  background: transparent;
+  border-radius: 15px;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  box-shadow: 
+    0 0 20px rgb(55, 206, 153),
+    0 0 40px rgb(55, 206, 153),
+    0 0 80px rgb(55, 206, 153),
+    inset 0 0 10px rgb(55, 206, 153);
+  animation: run 3600s linear infinite;
+}
+
+.neon-lightheart {
+  
+  width: 10%;
+  height: 20px;
+  background: transparent;
+  border-radius: 15px;
+  position: absolute;
+  top: 35%;
+  left: 0;
+  box-shadow: 
+    0 0 20px rgb(206, 113, 55),
+    0 0 40px  rgb(206, 113, 55),
+    0 0 80px  rgb(206, 113, 55),
+    inset 0 0 10px  rgb(206, 113, 55);
+  animation: run 0.8s linear infinite;
+}
+.neon-lightbreathpermin {
+  width: 10%;
+  height: 20px;
+  background: transparent;
+  border-radius: 15px;
+  position: absolute;
+  top: 30%;
+  left: 0;
+  box-shadow: 
+    0 0 20px rgb(246, 136, 197),
+    0 0 40px  rgb(246, 136, 197),
+    0 0 80px  rgb(246, 136, 197),
+    inset 0 0 10px  rgb(246, 136, 197);
+  animation: run 3.3s linear infinite;
+}
+
+.neon-lightbreath-in-out {
+  width: 10%;
+  height: 20px;
+  background: transparent;
+  border-radius: 15px;
+  position: absolute;
+  top: 25%;
+  left: 0;
+  box-shadow: 
+    0 0 20px rgb(246, 224, 136),
+    0 0 40px  rgb(246, 224, 136),
+    0 0 80px  rgb(246, 224, 136),
+    inset 0 0 10px  rgb(246, 224, 136);
+  animation: run 2s linear infinite;
+}
+
+
+/* Animation for neon light moving */
+@keyframes run {
+  0% {
+    left: 0%;
+    opacity: 0.5;
+  }
+  50% {
+    left: 50%;
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0.5;
+  }
 }
