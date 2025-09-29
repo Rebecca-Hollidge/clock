@@ -10,6 +10,10 @@
 <div class="canvasContainer">
     <canvas class="contextCanvas"></canvas>
 
+  <button id="musicToggle" class="music-btn">
+    <img id="musicIcon" src="img/music-off.png" alt="Toggle Music">
+  </button>
+
 
 <div class="background"></div>
 <div class="grid-background"></div>
@@ -119,6 +123,36 @@
 
 
  </div>
-  <script src="js/main.js"></script>
+  <script src="js/main.js"> </script>
+
+<script>
+window.addEventListener('load', () => {
+  const audio = document.createElement('audio');
+  audio.loop = true;
+  audio.src = 'audio/neon.mp3'; // better to keep mp3 in /audio folder
+  document.body.appendChild(audio);
+
+  const toggleBtn = document.getElementById('musicToggle');
+  const musicIcon = document.getElementById('musicIcon');
+
+  let isPlaying = false;
+
+  toggleBtn.addEventListener('click', () => {
+    if (isPlaying) {
+      audio.pause();
+      musicIcon.src = 'img/music-off.png';
+    } else {
+      audio.play();
+      musicIcon.src = 'img/music-on.png';
+    }
+    isPlaying = !isPlaying;
+  });
+});
+</script>
+
 </body>
+
+
+
 </html>
+
