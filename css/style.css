@@ -533,9 +533,26 @@
   100% { left: 100%; opacity: 0.5; }
 }
 
+.music-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 9999; 
+}
 
+.music-btn img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.2s ease;
+}
 
-
+.music-btn img:hover {
+  transform: scale(1.1);
+}
 
 
 
