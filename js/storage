@@ -1,16 +1,1 @@
-if (typeof(Storage) !== "undefined") {
-    const neon = localStorage.getItem("neon");
 
-    if (neon) {
-     
-        const neonElements = document.getElementsByClassName("neon");
-
-
-   
-        window.location.href = "index.html";
-    } else {
-        console.log("No data in localStorage, loading new session");
-    }
-} else {
-    console.log("Local storage is not supported.");
-}
